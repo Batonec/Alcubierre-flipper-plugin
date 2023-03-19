@@ -49,7 +49,7 @@ export function Component() {
         <Layout.Horizontal gap pad style={{flexWrap: 'wrap'}}>
           {data.stacks.map((stack) => (
 
-            <Layout.Container padh >
+            <Layout.Container >
 
             <Card
               hoverable
@@ -58,18 +58,10 @@ export function Component() {
               style={{
                 minWidth: 230,
                 height: 50,
-                borderColor: stack.id == data.currentStackId ? "0x00FFAA" : theme.primaryColor,
+                // backgroundColor: stack.id == data.currentStackId ? "0x00FFAA" : theme.primaryColor,
                 textAlign: 'center',
               }}>
             </Card>
-
-            <Space
-              style={{
-                background: undefined,
-                height: 10,
-                borderColor: undefined
-              }}>
-            </Space>
             
             {  
               stack.chain.map((screen) => (
